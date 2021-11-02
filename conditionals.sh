@@ -8,3 +8,4 @@ elif [ ${A_NUMBER} ] >4; then
 else
     echo "Number is NOT 4"
 fi
+# Note: the spaces in the brackets matter. If you omit them, it won't run.
