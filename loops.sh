@@ -1,26 +1,31 @@
 #!/bin/bash
 
-# Before we can get into loops we need to understand lists/arrays
-# Lists are a different structure from arrays in bash.
-
 # The following are lists:
 
 A_STR_LIST="cat dog hamster"
 AN_INT_LIST="1 2 3"
-# Note that the whitespace demarcates each element
 
-echo "A_STR_LIST":
+### 'LIST VARIABLES'
+
+# 'Lists' are not actually a construct in bash nor does the term designate a specific thing. From the point of view of bash, the above lists are just variables. We can see this from the `echo` statements that precede each loop. They return like any other character string held in a variable
+
+# It is the whitespace in combination with the loop syntax below that enables them to be treated as an iterable.
+
+# Note also that this is NOT an array in bash. There is an actual array data type where the syntax is different - see below.
+
+echo "A_STR_LIST: ${A_STR_LIST}:"
 for ele in $A_STR_LIST; do
     echo $ele
 done
 
-echo "AN_INT_LIST":
+echo "AN_INT_LIST: ${AN_INT_LIST}:"
 for ele in $AN_INT_LIST; do
     echo $ele
 done
 
-# We can also use elipses to stand for intervening values:
-ANOTHER_INT_LIST="1...6"
-
-# However if we tried to loop through this, as above, expecting 1, 2, 3, 4, 5, 6 it wouldn't work
-# Instead it would simply print 1...6
+# In addition to the informal lists above we can utilise BRACE-EXPANSION:
+echo "Brace expansion with nums from literal:"
+for num in {1..5}; do
+    echo -n $num
+done
+# PHI: How to run the above but from a brace stored in a variable?
