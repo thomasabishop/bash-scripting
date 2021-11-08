@@ -11,7 +11,8 @@ echo ${PRIM_VAR_INT}
 echo ${PRIM_VAR_INT}
 echo ${PRIM_VAR_BOOL}
 
-# Note there is no compunction to use capitals for variables but it can be helpful to distinguish primitives from other types of variables in your program
+# Note there is no compunction to use capitals for variables but it can be helpful to distinguish custom variables from program variables.
+
 # Quotation marks at definition are also not strictly necessary however they can help avoid bugs. Also serves as a reminder that every type is basically a string at the end of the day
 
 # Method for calling a bash program:
