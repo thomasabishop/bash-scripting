@@ -11,7 +11,9 @@ AN_INT_LIST="1 2 3"
 
 # It is the whitespace in combination with the loop syntax below that enables them to be treated as an iterable.
 
-# Note also that this is NOT an array in bash. There is an actual array data type where the syntax is different - see below.
+# Note also that list variables are NOT the same thing as arrays in bash. There is an actual array data type where the syntax is different - see below.
+
+## LOOPING THRU LIST VARIABLES
 
 echo "A_STR_LIST: ${A_STR_LIST}:"
 for ele in $A_STR_LIST; do
@@ -25,7 +27,25 @@ done
 
 # In addition to the informal lists above we can utilise BRACE-EXPANSION:
 echo "Brace expansion with nums from literal:"
-for num in {1..5}; do
-    echo -n $num
+for num in {1..4}; do
+    echo $num
 done
+
+echo " "
 # PHI: How to run the above but from a brace stored in a variable?
+
+### ARRAYS
+
+## INDEXED ARRAYS
+
+echo "ARRAYS"
+echo " "
+index_arr=(here are some words)
+
+# We access specific elements using the bracket style we use with vars:
+echo "Index referencing:"
+
+echo ${index_arr[2]}
+
+echo "Printing "
+printf "%s\n" "${index_arr[@]}"
