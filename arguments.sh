@@ -8,4 +8,6 @@ echo "The first argument is $1"
 
 echo "The second argument is $2"
 
-echo "Your name is $1 and you are $2 years old"
+echo -n "Your name is $1 and you are $2 years old"
+
+echo "The number of arguments provided is $#"
